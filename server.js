@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
     wallet: { type: String, unique: true },
     FullName: { type: String, required: true },
-    verified: { type: Boolean, default: true },
+    verified: { type: Boolean, default: false },
     verificationToken: { type: String },
     registrationDate: { type: Date, default: Date.now },
     isPrivate: { type: Boolean, default: false },
@@ -100,7 +100,7 @@ const transporter = nodemailer.createTransport({
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 500,
+    max: 1500,
 });
 
 app.use(limiter);
