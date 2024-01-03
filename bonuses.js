@@ -14,8 +14,8 @@ const Bonus = mongoose.model('Bonus', bonusSchema);
 
 const bonuses = [
     { title: 'Welcome Bonus!', points: 100 },
-    { title: 'Create first Task!', points: 10 },
-    // ... altri bonus
+    { title: 'Complete your profile!', points: 100 },
+    { title: 'Create your first Task!', points: 100 },
 ];
 
 Bonus.insertMany(bonuses)
